@@ -34,4 +34,3 @@ build/
 
 ###SECRET###
 .env
-application.properties
