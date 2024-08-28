@@ -16,4 +16,16 @@ public class ProduitService {
     public List<Produit> getAllProduit() {
         return (List<Produit>) produitsRepository.findAll();
     }
+
+    public Produit getProduitById(int id) {
+        return produitsRepository.findById(id).orElse(null);
+    }
+
+    public void updateProduit(Produit produit) {
+        produitsRepository.save(produit);
+    }
+
+    public Produit saveProduit(Produit produit) {
+        return produitsRepository.save(produit);
+    }
 }

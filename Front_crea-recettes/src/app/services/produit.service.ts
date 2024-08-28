@@ -1,4 +1,4 @@
-// src/app/api.service.ts
+// src/app/produit.service.ts
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -9,7 +9,7 @@ const baseUrl = 'http://localhost:8080/api/produits';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ProduitService {
 
   constructor(private http: HttpClient) {}
   getProduits(): Observable<ProduitModel[]> {

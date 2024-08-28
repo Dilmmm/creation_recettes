@@ -1,20 +1,6 @@
-<main class="main">
-  <div class="content">
-    <div class="left-side">
+<main>
+    <div class="center">
       <h1>{{ title }}</h1>
+      <app-liste-produit></app-liste-produit>
     </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side">
-      <div class="pill-group">
-        <p *ngIf="loading">Loading...</p>
-        <ng-container *ngIf="!loading">
-          <div *ngFor="let produit of produits" class="pill">
-            <span class="pill">{{ produit.nom }} </span>
-            <span class="pill">{{ produit.description }}</span>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-  </div>
 </main>
-<router-outlet></router-outlet>

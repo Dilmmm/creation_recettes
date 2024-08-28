@@ -1,0 +1,29 @@
+<!---
+        <ng-container class="container" *ngFor="let produit of produits">
+          <div class="row" *ngIf="isPresent">
+            <div class="col m4 s6">{{ produit.nom }} / {{ produit.description }} </div>
+          </div>
+        </ng-container>
+    -->
+  <ng-container *ngIf="isPresent">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let produit of produits" class="col s12 m6 l4">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img [src]="produit.image" alt="image produit">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <p>{{ produit.nom }}</p>
+                <p>{{ produit.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <div *ngIf="!isPresent">Pas de produit à afficher</div>
+
+<router-outlet></router-outlet>
